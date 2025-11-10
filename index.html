@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>¡Piedra, Papel o Tijera!</h1>
+
+    <div class="game-container">
+
+        <div class="column player-side">
+            <h2>Tú</h2>
+            <img src="imagenes/papel.png" alt="Tu elección" id="player-choice-img" class="choice-display">
+            
+            <p>¡Elige tu movimiento!</p>
+            <div class="opciones">
+                <button class="opcion" id="piedra">
+                    <img src="imagenes/piedra.png" alt="Piedra">
+                </button>
+                <button class="opcion" id="papel">
+                    <img src="imagenes/papel.png" alt="Papel">
+                </button>
+                <button class="opcion" id="tijera">
+                    <img src="imagenes/tijera.png" alt="Tijera">
+                </button>
+            </div>
+        </div>
+
+        <div class="column middle-column">
+            <div class="marcador">
+                <h2>Marcador</h2>
+                <p>
+                    <span id="jugador-score">0</span>
+                    -
+                    <span id="cpu-score">0</span>
+                </p>
+            </div>
+            <h2 id="resultado-texto">¡Elige tu movimiento!</h2>
+            
+            <button id="btn-reiniciar" style="display: none;">Jugar de Nuevo</button>
+            </div>
+
+        <div class="column cpu-side">
+            <h2>CPU</h2>
+            <img src="imagenes/papel.png" alt="Elección CPU" id="cpu-choice-img" class="choice-display">
+        </div>
+
+    </div> <audio id="sonido-win" src="sonidos/win.mp3"></audio>
+    <audio id="sonido-lose" src="sonidos/lose.mp3"></audio>
+    <audio id="sonido-tie" src="sonidos/tie.wav"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>

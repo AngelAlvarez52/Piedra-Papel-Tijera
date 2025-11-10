@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    overflow-x: hidden; 
+}
+
+h1 {
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: flex-start; 
+    max-width: 1000px;
+    margin: 15px auto; 
+}
+
+.column {
+    flex-basis: 30%; 
+    padding: 10px;
+}
+
+.player-side {
+    border-right: 2px solid #ccc;
+}
+
+.cpu-side {
+    border-left: 2px solid #ccc;
+}
+
+.middle-column {
+    flex-basis: 33%; 
+}
+
+.marcador {
+    font-size: 1.5em;
+}
+
+.marcador p {
+    font-size: 2.5em; 
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#resultado-texto {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #555;
+    height: 60px; 
+    margin-top: 20px;
+}
+
+.choice-display {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #555;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; /* Transición para todo */
+}
+
+.player-side p {
+    text-align: center;  
+    margin-top: 5px;     
+    margin-bottom: 10px; 
+}
+
+.opciones {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; 
+}
+
+.opcion {
+    border: 3px solid #333;
+    border-radius: 50%;
+    margin: 0 10px; 
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.opcion img {
+    width: 70px; 
+    height: 70px;
+    display: block;
+}
+
+.opcion:hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+}
+
+.opcion:active {
+    transform: scale(1.0);
+}
+
+@media (max-width: 768px) {
+    
+    h1 {
+        font-size: 1.8em; 
+    }
+
+    .game-container {
+        flex-direction: column;
+        align-items: center; 
+        margin-top: 10px; 
+    }
+
+    .column {
+        flex-basis: 100%;
+        max-width: 95%;
+        margin-bottom: 20px;
+    }
+
+    .player-side {
+        border-right: none; 
+        border-bottom: 2px solid #ccc; 
+        padding-bottom: 20px;
+    }
+    
+    .middle-column {
+         border-bottom: 2px solid #ccc; 
+         padding-bottom: 20px;
+    }
+
+    .cpu-side {
+        border-left: none; 
+    }
+    
+    .choice-display {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px; 
+    }
+
+    .player-side p {
+        text-align: center;  
+        margin-top: 0;       
+        margin-bottom: 10px; 
+    }
+
+    .opcion img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .opciones {
+        margin-top: 0; 
+    }
+
+    #resultado-texto {
+        font-size: 1.2em;
+        height: 40px; 
+    }
+}
+
+/* --- ESTILOS DE FEEDBACK (Sin cambios) --- */
+.winner {
+    border-color: #28a745; 
+    box-shadow: 0 0 15px #28a745; 
+    transform: scale(1.05); 
+}
+.loser {
+    border-color: #dc3545; 
+    box-shadow: 0 0 15px #dc3545; 
+    transform: scale(0.95); 
+}
+.tie {
+    border-color: #007bff; 
+}
+
+
+/* --- ✨ ESTILOS NUEVOS ✨ --- */
+
+/* Estilo para el botón de reiniciar */
+#btn-reiniciar {
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff; /* Azul */
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#btn-reiniciar:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilo para los botones de opción cuando están deshabilitados */
+.opcion:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none; 
+    background-color: white; 
+}
+
+.opcion:disabled:hover {
+    transform: none;
+    background-color: white;
+}
